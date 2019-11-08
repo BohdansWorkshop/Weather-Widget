@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29418.71
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCore.Angular.WeatherWidget", "NetCore.Angular.WeatherWidget\NetCore.Angular.WeatherWidget.csproj", "{D9B4EBFE-04B4-4F34-891F-C8B5C8DBAA28}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D9B4EBFE-04B4-4F34-891F-C8B5C8DBAA28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9B4EBFE-04B4-4F34-891F-C8B5C8DBAA28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9B4EBFE-04B4-4F34-891F-C8B5C8DBAA28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9B4EBFE-04B4-4F34-891F-C8B5C8DBAA28}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BF26D16A-4DB7-4B47-955E-C416D13A3023}
+	EndGlobalSection
+EndGlobal
