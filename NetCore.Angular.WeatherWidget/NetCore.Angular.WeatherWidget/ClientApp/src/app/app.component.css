@@ -4,3 +4,7 @@
     padding-top: 50px;
   }
 }
+agm-map {
+  width: 100rem;
+  height: 50rem;
+}

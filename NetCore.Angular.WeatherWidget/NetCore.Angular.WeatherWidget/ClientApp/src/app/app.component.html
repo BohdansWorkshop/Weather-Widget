@@ -1,6 +1,10 @@
-<body>
-  <app-nav-menu></app-nav-menu>
-  <div class="container">
-    <router-outlet></router-outlet>
-  </div>
-</body>
+
+<div class="row align-items-center justify-content-center">
+  <h1>{{ title }}</h1>
+</div>
+
+<div class="row align-items-center justify-content-center">
+  <agm-map [latitude]="lat" [longitude]="lng">
+    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+  </agm-map>
+</div>
