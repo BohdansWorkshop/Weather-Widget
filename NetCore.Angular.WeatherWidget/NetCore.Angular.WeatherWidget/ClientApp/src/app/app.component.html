@@ -4,7 +4,7 @@
 </div>
 
 <div class="row align-items-center justify-content-center">
-  <agm-map [latitude]="lat" [longitude]="lng">
+  <agm-map [latitude]="lat" [longitude]="lng" (mapClick)="GetWeatherByClick($event.coords)">
     <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
   </agm-map>
 </div>
