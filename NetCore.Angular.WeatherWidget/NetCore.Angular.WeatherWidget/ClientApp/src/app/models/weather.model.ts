@@ -1,5 +1,5 @@
 export class WeatherModel {
-    Weather: Weather;
+    WeatherDescription: Weather;
     Environment: Environment;
     Wind: Wind;
     Clouds: Clouds;
@@ -25,6 +25,7 @@ export class Environment {
 export class Wind {
     Speed: number;
     Deg: number;
+    Gust: number;
 }
 
 export class Clouds {
@@ -32,11 +33,8 @@ export class Clouds {
 }
 
 export class GeoData {
-    Type: number;
-    Id: number;
     Country: string;
     City: string;
-    TimeZone: string;
     Sunrise: string;
     Sunset: string;
 }

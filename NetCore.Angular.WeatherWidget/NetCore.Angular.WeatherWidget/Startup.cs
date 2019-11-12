@@ -1,10 +1,11 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using NetCore.Angular.WeatherWidget.Builders.Weather;
+using NetCore.Angular.WeatherWidget.Models;
 
 namespace NetCore.Angular.WeatherWidget
 {
@@ -27,6 +28,10 @@ namespace NetCore.Angular.WeatherWidget
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+
+            services.Configure<ConfigurationSettings>(Configuration.GetSection(nameof(ConfigurationSettings)));
+
+            services.AddTransient<IWeatherAssistant>(s=> new WeatherAssistant(Configuration.GetSection(nameof(ConfigurationSettings)).Get<ConfigurationSettings>().WeatherApiUrl));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -3,8 +3,17 @@
   <h1>{{ title }}</h1>
 </div>
 
-<div class="row align-items-center justify-content-center">
-  <agm-map [latitude]="lat" [longitude]="lng" (mapClick)="GetWeatherByClick($event.coords)">
-    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-  </agm-map>
+<div class="row">
+  <div class="col">
+    <div class="agm.map.block">
+      <agm-map [latitude]="lat" [longitude]="lng" (mapClick)="GetWeatherByClick($event.coords)">
+        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+      </agm-map>
+    </div>
+  </div>
+  <div class="col">
+    <div *ngIf="weather != null" class="weather.info">
+      {{weather.weatherdescription.description}}
+    </div>
+  </div>
 </div>

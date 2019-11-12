@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable, Inject } from '@angular/core';
+import { WeatherModel } from '../models/weather.model';
 
 @Injectable()
 
@@ -12,7 +13,6 @@ export class WeatherService{
     }
 
     async GetWeatherByCoordinates(latitude, longitude) {
-        return await this.HttpClient.get(this.rootUrl + "GetWeatherByCoordinates?latitude=" + latitude + "&longitude=" + longitude);
+        return await this.HttpClient.get<WeatherModel>(this.rootUrl + "GetWeatherByCoordinates?latitude=" + latitude + "&longitude=" + longitude).toPromise();
     }
-
 }

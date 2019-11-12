@@ -8,3 +8,7 @@ agm-map {
   width: 100rem;
   height: 50rem;
 }
+
+.agm.map.block{
+  padding-left: 3rem;
+}
