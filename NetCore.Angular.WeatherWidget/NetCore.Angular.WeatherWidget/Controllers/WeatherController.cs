@@ -16,11 +16,13 @@ namespace NetCore.Angular.WeatherWidget.Controllers
     [ApiController]
     public class WeatherController : ControllerBase
     {
+
         private readonly IWeatherAssistant _weatherAsistant;
         public WeatherController(IWeatherAssistant weatherAssistant)
         {
             _weatherAsistant = weatherAssistant;
         }
+
         [HttpGet]
         public async Task<IActionResult> GetWeatherByCoordinates(double latitude, double longitude)
         {
@@ -34,5 +36,6 @@ namespace NetCore.Angular.WeatherWidget.Controllers
                 return BadRequest(ex);
             }
         }
+
     }
 }

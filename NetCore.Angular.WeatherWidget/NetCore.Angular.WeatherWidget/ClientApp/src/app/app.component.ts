@@ -20,5 +20,6 @@ export class AppComponent {
         var latitude = coordinates.lat;
         var longitude = coordinates.lng;
         this.weather = await this._weatherService.GetWeatherByCoordinates(latitude, longitude);
+        this.title = "UPDATED";
     }
 }

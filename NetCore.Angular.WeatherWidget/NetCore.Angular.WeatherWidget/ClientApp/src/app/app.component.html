@@ -13,7 +13,33 @@
   </div>
   <div class="col">
     <div *ngIf="weather != null" class="weather.info">
-      {{weather.weatherdescription.description}}
+
+      Description: {{weather.weatherDescription.description}}
+      Main: {{weather.weatherDescription.main}}
+      <img src="{{weather.weatherDescription.icon}}" />
+
+      Temperature: {{weather.environment.Temperature}}
+      TemperatureMin: {{weather.environment.TemperatureMin}}
+      TemperatureMax: {{weather.environment.TemperatureMax}}
+
+      Pressure: {{weather.environment.pressure}}
+      Humidity: {{weather.environment.humidity}}
+      Visibility: {{weather.environment.visibility}}
+      Clouds: {{weather.environment.clouds}}
+
+      Wind:
+      Speed: {{weather.wind.speed}}
+      Deg: {{weather.wind.deg}}
+      Gust: {{weather.wind.gust}}
+
+      GeoData:
+
+      Country: {{weather.geodata.country}}
+      City: {{weather.geodata.city}}
+      Sunrise: {{weather.geodata.sunrise}}
+      Sunset: {{weather.geodata.sunset}}
+
+
     </div>
   </div>
 </div>

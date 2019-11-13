@@ -1,12 +1,12 @@
 export class WeatherModel {
-    WeatherDescription: Weather;
+    WeatherDescription: WeatherDescription;
     Environment: Environment;
     Wind: Wind;
     Clouds: Clouds;
     GeoData: GeoData;
 }
 
-export class Weather {
+export class WeatherDescription {
     Id: number;
     Main: string;
     Description: string;
@@ -20,16 +20,13 @@ export class Environment {
     Pressure: number;
     Humidity: number;
     Visibility: number;
+    Clouds: number;
 }
 
 export class Wind {
     Speed: number;
     Deg: number;
     Gust: number;
-}
-
-export class Clouds {
-    All: number;
 }
 
 export class GeoData {
