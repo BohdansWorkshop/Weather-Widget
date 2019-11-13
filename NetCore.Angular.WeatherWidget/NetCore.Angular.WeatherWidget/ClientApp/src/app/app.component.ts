@@ -16,10 +16,12 @@ export class AppComponent {
 
     constructor(private _weatherService: WeatherService) {}
 
-    async GetWeatherByClick(coordinates) {
+     GetWeatherByClick(coordinates) {
         var latitude = coordinates.lat;
-        var longitude = coordinates.lng;
-        this.weather = await this._weatherService.GetWeatherByCoordinates(latitude, longitude);
+         var longitude = coordinates.lng;
+         this._weatherService.GetWeatherByCoordinates(latitude, longitude).then((response: WeatherModel) => {
+             this.weather = response;
+         })
         this.title = "UPDATED";
     }
 }

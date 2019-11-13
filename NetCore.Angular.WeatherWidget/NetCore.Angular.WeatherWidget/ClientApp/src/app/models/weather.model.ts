@@ -2,7 +2,6 @@ export class WeatherModel {
     WeatherDescription: WeatherDescription;
     Environment: Environment;
     Wind: Wind;
-    Clouds: Clouds;
     GeoData: GeoData;
 }
 
