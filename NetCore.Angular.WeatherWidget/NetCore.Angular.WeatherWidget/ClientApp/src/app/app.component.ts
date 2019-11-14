@@ -21,7 +21,6 @@ export class AppComponent {
          var longitude = coordinates.lng;
          this._weatherService.GetWeatherByCoordinates(latitude, longitude).then((response: WeatherModel) => {
              this.weather = response;
-         })
-        this.title = "UPDATED";
+         });
     }
 }
