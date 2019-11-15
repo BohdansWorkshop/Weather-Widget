@@ -34,7 +34,6 @@ namespace NetCore.Angular.WeatherWidget
             services.AddTransient<IWeatherAssistant>(s=> new WeatherAssistant(Configuration.GetSection(nameof(ConfigurationSettings)).Get<ConfigurationSettings>().WeatherApiUrl));
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
