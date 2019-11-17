@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { WeatherService } from './services/weather.service';
 import { WeatherModel } from './models/weather.model';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
     selector: 'app-root',
@@ -14,13 +15,24 @@ export class AppComponent {
     longitude = 0;
     weather: WeatherModel = new WeatherModel();
 
-    constructor(private _weatherService: WeatherService) {}
+    constructor(private _weatherService: WeatherService, private spinner: NgxSpinnerService) { }
 
-     GetWeatherByClick(coordinates) {
+    GetWeatherByClick(coordinates) {
+        this.ShowSpinner(2000);
+
         var latitude = coordinates.lat;
-         var longitude = coordinates.lng;
-         this._weatherService.GetWeatherByCoordinates(latitude, longitude).then((response: WeatherModel) => {
-             this.weather = response;
-         });
+        var longitude = coordinates.lng;
+        this._weatherService.GetWeatherByCoordinates(latitude, longitude).then((response: WeatherModel) => {
+            this.ShowSpinner(2000);
+            this.weather = response;
+        });
+    }
+
+
+    ShowSpinner(seconds: number) {
+        this.spinner.show();
+        setTimeout(() => {
+            this.spinner.hide();
+        }, seconds);
     }
 }
