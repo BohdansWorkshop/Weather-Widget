@@ -1,36 +1,36 @@
 export class WeatherModel {
-    WeatherDescription: WeatherDescription;
-    Environment: Environment;
-    Wind: Wind;
-    GeoData: GeoData;
+    weatherDescription: WeatherDescription;
+    environment: Environment;
+    wind: Wind;
+    geoData: GeoData;
 }
 
 export class WeatherDescription {
-    Id: number;
-    Main: string;
-    Description: string;
-    Icon: string;
+    id: number;
+    main: string;
+    description: string;
+    icon: string;
 }
 
 export class Environment {
-    Temperature: number;
-    TemperatureMin: number;
-    TemperatureMax: number;
-    Pressure: number;
-    Humidity: number;
-    Visibility: number;
-    Clouds: number;
+    temp: number;
+    temp_min: number;
+    temp_max: number;
+    pressure: number;
+    humidity: number;
+    visibility: number;
+    clouds: number;
 }
 
 export class Wind {
-    Speed: number;
-    Deg: number;
-    Gust: number;
+    speed: number;
+    deg: number;
+    gust: number;
 }
 
 export class GeoData {
-    Country: string;
-    City: string;
-    Sunrise: string;
-    Sunset: string;
+    country: string;
+    city: string;
+    sunrise: string;
+    sunset: string;
 }

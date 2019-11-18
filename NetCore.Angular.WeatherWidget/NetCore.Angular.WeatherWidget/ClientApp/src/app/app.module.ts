@@ -12,6 +12,7 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 
 import { NgxSpinnerModule } from "ngx-spinner";
+import { GaugeChartModule } from 'angular-gauge-chart';
 
 @NgModule({
     declarations: [
@@ -33,7 +34,8 @@ import { NgxSpinnerModule } from "ngx-spinner";
             { path: 'counter', component: CounterComponent },
             { path: 'fetch-data', component: FetchDataComponent },
         ]),
-        NgxSpinnerModule
+        NgxSpinnerModule,
+        GaugeChartModule
     ],
     providers: [],
     bootstrap: [AppComponent]

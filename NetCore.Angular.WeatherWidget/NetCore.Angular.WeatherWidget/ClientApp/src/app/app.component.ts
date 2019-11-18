@@ -15,6 +15,22 @@ export class AppComponent {
     longitude = 0;
     weather: WeatherModel = new WeatherModel();
 
+    public canvasWidth = 350;
+    public needleValue = 20;
+    public centralLabel = '';
+    public name = 'Temperature';
+    public bottomLabel = '65';
+    public options = {
+        hasNeedle: true,
+        needleColor: 'white',
+        needleUpdateSpeed: 1000,
+        arcColors: ['rgb(61,204,91)', 'rgb(239,214,19)', 'rgb(255,84,84)'],
+        arcDelimiters: [30, 60],
+        rangeLabel: ['0', '45+'],
+        needleStartValue: 15,
+    };
+
+
     constructor(private _weatherService: WeatherService, private spinner: NgxSpinnerService) { }
 
     GetWeatherByClick(coordinates) {
@@ -25,6 +41,9 @@ export class AppComponent {
         this._weatherService.GetWeatherByCoordinates(latitude, longitude).then((response: WeatherModel) => {
             this.ShowSpinner(2000);
             this.weather = response;
+            this.needleValue = this.weather.environment.temp * 100 / 45;
+            this.bottomLabel = this.weather.environment.temp.toString();
+
         });
     }
 
