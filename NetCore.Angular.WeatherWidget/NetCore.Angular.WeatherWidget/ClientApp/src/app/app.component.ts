@@ -20,7 +20,7 @@ export class AppComponent {
     GetWeatherByClick(coordinates) {
         var latitude = coordinates.lat;
         var longitude = coordinates.lng;
-        this.ShowSpinner(10000);
+        this.ShowSpinner(2000);
         this._weatherService.GetWeatherByCoordinates(latitude, longitude)
             .subscribe((response: WeatherModel) => {
                 this.weather = response;
