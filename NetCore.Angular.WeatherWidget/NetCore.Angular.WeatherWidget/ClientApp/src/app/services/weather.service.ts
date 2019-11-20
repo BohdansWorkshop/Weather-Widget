@@ -4,7 +4,7 @@ import { WeatherModel } from '../models/weather.model';
 
 @Injectable()
 
-export class WeatherService{
+export class WeatherService {
     readonly rootUrl: string;
     readonly weatherController: string;
 
@@ -12,7 +12,7 @@ export class WeatherService{
         this.rootUrl = baseUrl + 'api/Weather/';
     }
 
-    async GetWeatherByCoordinates(latitude, longitude) {
-        return await this.HttpClient.get<WeatherModel>(this.rootUrl + "GetWeatherByCoordinates?latitude=" + latitude + "&longitude=" + longitude).toPromise();
+    GetWeatherByCoordinates(latitude, longitude) {
+        return this.HttpClient.get<WeatherModel>(this.rootUrl + "GetWeatherByCoordinates?latitude=" + latitude + "&longitude=" + longitude);
     }
 }

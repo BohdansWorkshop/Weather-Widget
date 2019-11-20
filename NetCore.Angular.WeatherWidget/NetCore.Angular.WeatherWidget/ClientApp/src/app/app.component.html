@@ -20,8 +20,6 @@
       <img *ngIf="weather.weatherDescription.icon != null" src="{{weather.weatherDescription.icon}}" /> <br />
 
       Temperature: {{weather.environment.temp}} <br />
-      TemperatureMin: {{weather.environment.temp_Min}} <br />
-      TemperatureMax: {{weather.environment.temp_Max}} <br />
 
       Pressure: {{weather.environment.pressure}} <br />
       Humidity: {{weather.environment.humidity}} <br />
@@ -33,21 +31,6 @@
       Deg: {{weather.wind.deg}} <br />
       Gust: {{weather.wind.gust}} <br />
 
-      <h1> GeoData </h1>
-      Country: {{weather.geoData.country}} <br />
-      City: {{weather.geoData.city}} <br />
-      Sunrise: {{weather.geoData.sunrise}} <br />
-      Sunset: {{weather.geoData.sunset}} <br />
-
     </div>
-
-    <rg-gauge-chart [canvasWidth]="canvasWidth"
-                    [needleValue]="needleValue"
-                    [centralLabel]="centralLabel"
-                    [options]="options"
-                    [name]="name"
-                    [bottomLabel]="bottomLabel"></rg-gauge-chart>
-
-
   </div>
 </div>

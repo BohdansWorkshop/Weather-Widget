@@ -1,12 +1,10 @@
 export class WeatherModel {
-    weatherDescription: WeatherDescription;
-    environment: Environment;
-    wind: Wind;
-    geoData: GeoData;
+    weatherDescription: WeatherDescription = new WeatherDescription();
+    environment: Environment = new Environment();
+    wind: Wind = new Wind();
 }
 
 export class WeatherDescription {
-    id: number;
     main: string;
     description: string;
     icon: string;
@@ -14,8 +12,6 @@ export class WeatherDescription {
 
 export class Environment {
     temp: number;
-    temp_min: number;
-    temp_max: number;
     pressure: number;
     humidity: number;
     visibility: number;
@@ -26,11 +22,4 @@ export class Wind {
     speed: number;
     deg: number;
     gust: number;
-}
-
-export class GeoData {
-    country: string;
-    city: string;
-    sunrise: string;
-    sunset: string;
 }

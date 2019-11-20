@@ -48,10 +48,6 @@ namespace NetCore.Angular.WeatherWidget.Builders.Weather
             var windModel = JsonConvert.DeserializeObject<WindModel>(json["wind"].ToString());
             weatherModel.Wind = windModel;
 
-            var geoData = JsonConvert.DeserializeObject<GeoDataModel>(json["sys"].ToString());
-            geoData.City = json["name"].ToString();
-            weatherModel.GeoData = geoData;
-
             return weatherModel;
         }
     }
